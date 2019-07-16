@@ -56,10 +56,13 @@ export default (state, action) => {
                 actionRequired: true,
                 request: {
                     path: `/order/cart/${state.cartId}/domain`,
-                    callBack: '',
+                    callBack: USER_VALIDATE_ORDER,
                     body
                 },
             }
+        }
+        case USER_VALIDATE_ORDER : {
+            return state
         }
         default:
             return state
@@ -70,5 +73,6 @@ export const ACTION_WAS_FIRED = 'ACTION_WAS_FIRED'
 export const USER_REQUEST_TOKEN = 'USER_REQUEST_TOKEN'
 export const USER_WANT_TO_CHECK_DOMAIN = 'USER_WANT_TO_CHECK_DOMAIN'
 export const USER_ADD_TO_CART = 'USER_ADD_TO_CART'
+export const USER_VALIDATE_ORDER = 'USER_VALIDATE_ORDER'
 export const OVH_ANSWER_DOMAIN_CHECK = 'OVH_ANSWER_DOMAIN_CHECK'
 export const OVH_ANSWER_TOKEN = 'OVH_ANSWER_TOKEN'

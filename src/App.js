@@ -31,7 +31,7 @@ function App() {
         const {path, body, callBack} = data
         const raw = await fetch(API_ENDPOINT + path, body || BASE_BODY)
         const clean = await raw.json()
-        console.log('sendRequest answer : ', clean)
+        console.log('OVH answer : ', clean)
         dispatch({type: callBack, payload: clean})
         setIsLoading(false)
     }
